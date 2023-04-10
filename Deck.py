@@ -18,6 +18,17 @@ class Deck:
         def showcards (self):
             for c in self.cards: 
                 c.show_card()
-                
+        
+        def shownumcards (self,start,num):
+            i = start
+            hand = []
+            while i<num: 
+                hand.append(self.cards[i].show_card())
+                i+=1
+            return hand 
+            
         def shuffle(self):
             random.shuffle (self.cards)
+            
+        def getcards (self):
+            return self.cards 
