@@ -1,4 +1,4 @@
-#!/bin/bash/python3
+
 class Cards:
     def __init__(self,suit,value):
         self.suit = suit
@@ -23,4 +23,7 @@ class Cards:
                 print ('You have entered an incorrect value, Please spell out the card Value. For example a 2 is Two.')
                 return False
                 
-                
+    def show_card (self):
+        print ("{} of {}".format(self.value,self.suit))
+
+        
