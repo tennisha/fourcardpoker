@@ -10,9 +10,14 @@ class Game:
     
     def gethand (self,deck,start,hands):
         allhands = []
+        print ("number of hands is " +str(self.numhands) )
         i=0
         while (i<self.numhands):
-            allhands.append(deck.shownumcards(start,hands))
+            print (str(i) + " is the value of i and start is "+str(start))
+            
+            nexthand = deck.shownumcards(start,start+5)
+            print (nexthand)
+            allhands = allhands+nexthand
             i+=1
             start+=5
         #print(deck.showcards)
