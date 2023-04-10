@@ -1,10 +1,12 @@
 #!/bin/bash/python3
 from cards import Cards
+import random
 class Deck:
     
         def __init__ (self):
             self.cards = []
             self.build()
+            self.shuffle()
             self.showcards()
             
         def build (self):
@@ -17,4 +19,5 @@ class Deck:
             for c in self.cards: 
                 c.show_card()
                 
-                
+        def shuffle(self):
+            random.shuffle (self.cards)
